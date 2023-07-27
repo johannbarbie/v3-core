@@ -79,7 +79,9 @@ library FullMath {
         assembly {
             twos := add(div(sub(0, twos), twos), 1)
         }
-        prod0 |= prod1 * twos;
+        unchecked {
+            prod0 |= prod1 * twos;
+        }
 
         // Invert denominator mod 2**256
         // Now that denominator is an odd number, it has an inverse
