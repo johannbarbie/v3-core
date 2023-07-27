@@ -61,7 +61,7 @@ library FullMath {
         // Factor powers of two out of denominator
         // Compute largest power of two divisor of denominator.
         // Always >= 1.
-        uint256 twos
+        uint256 twos;
         unchecked {
             twos = -denominator & denominator;
         }
